@@ -3,7 +3,7 @@ import { validator } from '../midlewares/api.validator';
 import synonymsController from './synonyms.controller';
 import {
     bodyNewWordValidator,
-    bodysynonymsValidator,
+    bodySynonymsValidator,
     isWordStringValidator,
     paramWordExistsValidator
 } from '../midlewares/synonyms.validator';
@@ -19,14 +19,14 @@ router.route("/synonyms/:word")
 router.route("/synonyms")
     .post([
         bodyNewWordValidator,
-        bodysynonymsValidator,
+        bodySynonymsValidator,
         validator,
     ], synonymsController.post);
 
 router.route("/synonyms/:word")
     .patch([
         paramWordExistsValidator,
-        bodysynonymsValidator,
+        bodySynonymsValidator,
         validator,
     ], synonymsController.patch)
 

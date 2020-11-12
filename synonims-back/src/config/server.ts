@@ -11,8 +11,8 @@ import { port, useHttps } from './vars';
 const server = useHttps
     ? https.createServer(
         {
-            key: fs.readFileSync(path.join(__dirname, "../../ssl/etesian.key")),
-            cert: fs.readFileSync(path.join(__dirname, "../../ssl/etesian.cert")),
+            key: fs.readFileSync(path.join(__dirname, "../../key.pem")),
+            cert: fs.readFileSync(path.join(__dirname, "../../cert.pem")),
         },
         app
     )
@@ -20,7 +20,7 @@ const server = useHttps
 
 export const startServer = () =>
     server
-        .listen(port, () => logger.error(`Express running on port ${port}`))
+        .listen(port, () => logger.info(`Express running on port ${port}`, { https: useHttps }))
         .on("error", (error) => {
             logger.error(`Express failed with error`, error)
         });

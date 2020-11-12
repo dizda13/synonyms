@@ -3,7 +3,7 @@ import { HashTable } from "../models/hashTable.model";
 import { SynonymService } from './interfaces/SynonymService';
 import synonymsDao from './synonyms.dao';
 
-export class synonymsStandardService implements SynonymService {
+export class SynonymsStandardService implements SynonymService {
     private wordTable: HashTable<string>;
     private synonymsTable: HashTable<string[]>;
 
@@ -13,14 +13,16 @@ export class synonymsStandardService implements SynonymService {
         this.synonymsTable = synonymsDao.getsynonymsTable();
     }
 
-    public getsynonym(
+    // time - O(1)
+    // memory - O(1)
+    public getSynonym(
         word: string,
     ): string[] | undefined {
         const synonymsId: string | undefined = this.wordTable.get(word);
         return synonymsId !== undefined ? this.synonymsTable.get(synonymsId) : undefined
     }
 
-    public deletesynonym(
+    public deleteSynonym(
         word: string,
     ): string[] | undefined {
         const synonymsId: string | undefined = this.wordTable.get(word);
@@ -46,7 +48,7 @@ export class synonymsStandardService implements SynonymService {
     ): string[] | undefined {
         words = uniq(words);
 
-        // memory -
+        // memory - O(n)
         const synonymsTableIds: string[] = [];
         const newId: string = synonymsDao.getNextId();
         const newWords: string[] = [];
@@ -61,20 +63,25 @@ export class synonymsStandardService implements SynonymService {
             }
         });
 
-        this.synonymsTable.set(newId, newWords);
-        this.mergeTables(newId, ...uniq(synonymsTableIds));
+        if (newWords.length > 0 || synonymsTableIds.length > 1) {
+            this.synonymsTable.set(newId, newWords);
+        }
+        if ((newWords.length ? 1 : 0) + synonymsTableIds.length > 1) {
+            this.mergeTables(newId, ...uniq(synonymsTableIds));
+        }
 
         return this.synonymsTable.get(newId);
     }
 
     private mergeTables(mainTableKey: string, ...otherTableKeys: string[]) {
+        // time O(n)
         forEach(uniq(otherTableKeys), (replaceKey: string) => {
-            const othersynonyms = this.synonymsTable.get(replaceKey);
-            forEach(othersynonyms, (synWord: string) => {
+            const otherSynonyms = this.synonymsTable.get(replaceKey);
+            forEach(otherSynonyms, (synWord: string) => {
                 this.wordTable.set(synWord, mainTableKey)
             })
             this.synonymsTable.set(mainTableKey, [
-                ...othersynonyms as string[],
+                ...otherSynonyms as string[],
                 ...this.synonymsTable.get(mainTableKey) as string[],
             ])
 

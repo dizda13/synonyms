@@ -5,3 +5,114 @@
 {"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 18:52:40"}
 {"message":"Express running on port 3030","level":"error","timestamp":"12.11.2020 @ 18:52:40"}
 {"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 18:52:43"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 20:40:17"}
+{"message":"Express running on port 3030","level":"error","timestamp":"12.11.2020 @ 20:40:17"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 20:40:52"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:09:56"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":3030,"level":"error","message":"Express failed with error listen EADDRINUSE: address already in use :::3030","stack":"Error: listen EADDRINUSE: address already in use :::3030\n    at Server.setupListenHandle [as _listen2] (net.js:1270:14)\n    at listenInCluster (net.js:1318:12)\n    at Server.listen (net.js:1405:7)\n    at Object.exports.startServer (/Users/dizda13/Projects/reeinvent/synonims-back/dist/config/server.js:16:36)\n    at /Users/dizda13/Projects/reeinvent/synonims-back/dist/index.js:11:92\n    at Generator.next (<anonymous>)\n    at fulfilled (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/tslib/tslib.js:112:62)\n    at tryCatcher (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/promise.js:547:31)\n    at Promise._settlePromise (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/promise.js:604:18)\n    at Promise._settlePromise0 (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/promise.js:649:10)\n    at Promise._settlePromises (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/promise.js:729:18)\n    at _drainQueueStep (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/async.js:93:12)\n    at _drainQueue (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/async.js:86:9)\n    at Async._drainQueues (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/async.js:102:5)\n    at Immediate.Async.drainQueues (/Users/dizda13/Projects/reeinvent/synonims-back/node_modules/bluebird/js/release/async.js:15:14)","timestamp":"12.11.2020 @ 22:09:56"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:11:00"}
+{"message":"Express running on port 3030","level":"error","timestamp":"12.11.2020 @ 22:11:00"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:16:45"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:54:42"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 22:54:42"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:55:20"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:55:31"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 22:55:31"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:57:10"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:58:32"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 22:58:32"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:58:57"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 22:59:20"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 22:59:20"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:00:24"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:08:36"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 23:08:36"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"12.11.2020 @ 23:08:48"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:09:28"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:10:32"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 23:10:32"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"12.11.2020 @ 23:10:39"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:11:55"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:14:00"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 23:14:00"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:20:23"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:20:28"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 23:20:28"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:21:18"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:21:23"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 23:21:23"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:24:05"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:28:43"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 23:28:43"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:29:45"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:37:39"}
+{"message":"Express running on port 3030","level":"info","timestamp":"12.11.2020 @ 23:37:39"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"12.11.2020 @ 23:37:55"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"12.11.2020 @ 23:38:22"}
+{"message":"Starting synonyms (production)","level":"info","timestamp":"13.11.2020 @ 01:24:35"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 01:24:36"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 01:24:59"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 01:25:14"}
+{"message":"Shutting down synonyms (production)","level":"info","timestamp":"13.11.2020 @ 01:25:52"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 01:26:12"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 01:26:12"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 01:26:24"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 01:28:13"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 01:29:50"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 01:29:50"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 01:29:56"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 01:30:10"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 01:30:17"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 01:30:17"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 01:30:35"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:15:48"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:22:59"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 10:22:59"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 10:23:07"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:29:30"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:29:35"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 10:29:36"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:30:24"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:34:35"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 10:34:35"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 10:34:51"}
+{"message":"/Users/dizda13/Projects/reeinvent/synonims-back","level":"info","timestamp":"13.11.2020 @ 10:34:52"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:35:24"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:35:29"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 10:35:29"}
+{"word":"dino","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:36:26"}
+{"word":"dino","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:36:56"}
+{"word":"dino","synonyms":["hepek","mosen","moler","dizda"],"level":"info","message":"post: create synonym started","timestamp":"13.11.2020 @ 10:37:06"}
+{"word":"dino","allsynonyms":["hepek","mosen","moler","dizda","dino"],"level":"info","message":"post: create synonym success","timestamp":"13.11.2020 @ 10:37:06"}
+{"word":"dino","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:37:06"}
+{"word":"dino","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:37:06"}
+{"word":"hepek","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:37:11"}
+{"word":"hepek","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:37:11"}
+{"word":"fax","synonyms":["fakultet","collage"],"level":"info","message":"post: create synonym started","timestamp":"13.11.2020 @ 10:37:30"}
+{"word":"fax","allsynonyms":["fakultet","collage","fax"],"level":"info","message":"post: create synonym success","timestamp":"13.11.2020 @ 10:37:30"}
+{"word":"fax","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:37:30"}
+{"word":"fax","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:37:30"}
+{"word":"hepek","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:37:34"}
+{"word":"hepek","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:37:34"}
+{"word":"fax","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:37:38"}
+{"word":"fax","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:37:38"}
+{"word":"hepek","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:37:42"}
+{"word":"hepek","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:37:42"}
+{"word":"hepek","synonyms":["fax"],"level":"info","message":"patch: create synonym started","timestamp":"13.11.2020 @ 10:37:54"}
+{"word":"hepek","allsynonyms":["hepek","mosen","moler","dizda","dino","fakultet","collage","fax"],"level":"info","message":"patch: update synonym success","timestamp":"13.11.2020 @ 10:37:54"}
+{"word":"hepek","level":"info","message":"delete: delete synonym started","timestamp":"13.11.2020 @ 10:37:58"}
+{"word":"hepek","synonyms":["mosen","moler","dizda","dino","fakultet","collage","fax"],"level":"info","message":"delete: synonym deleted","timestamp":"13.11.2020 @ 10:37:58"}
+{"word":"mosen","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:38:03"}
+{"word":"mosen","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:38:03"}
+{"word":"dizda","level":"info","message":"get: fetch synonyms started","timestamp":"13.11.2020 @ 10:38:13"}
+{"word":"dizda","level":"info","message":"get: fetch synonyms sucess","timestamp":"13.11.2020 @ 10:38:13"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 10:38:34"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 12:26:10"}
+{"message":"Express running on port 80","level":"info","timestamp":"13.11.2020 @ 12:26:10"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 12:26:26"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 12:26:37"}
+{"message":"Express running on port 3030","level":"info","timestamp":"13.11.2020 @ 12:26:37"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 12:26:56"}
+{"message":"Starting synonyms (development)","level":"info","timestamp":"13.11.2020 @ 14:55:28"}
+{"message":"Express running on port 80","level":"info","timestamp":"13.11.2020 @ 14:55:29"}
+{"message":"Shutting down synonyms (development)","level":"info","timestamp":"13.11.2020 @ 14:55:31"}

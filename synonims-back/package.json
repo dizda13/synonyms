@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.13.7"
+  },
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=development node dist/index.js",
     "test": "nyc --reporter=lcov --reporter=text-summary mocha -r ts-node/register tests/**/*_spec.ts",
@@ -41,9 +45,16 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
     "@types/connect-timeout": "0.0.34",
     "@types/sinon": "^9.0.8",
     "@types/supertest": "^2.0.10",
+    "@types/morgan": "^1.9.1",
+    "@types/method-override": "0.0.31",
+    "@types/lodash": "^4.14.162",
+    "@types/bluebird": "^3.5.32",
+    "@types/dotenv-safe": "^8.1.1",
+    "@types/cors": "^2.8.7",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "connect-timeout": "^1.9.0",
@@ -59,6 +70,9 @@
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
     "sinon": "^9.2.1",
-    "tsconfig-paths": "^3.9.0"
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.2",
+    "winston": "^3.3.3",
+    "tslib": "1.14.1"
   }
 }

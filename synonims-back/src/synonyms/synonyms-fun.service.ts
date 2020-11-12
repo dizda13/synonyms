@@ -2,17 +2,17 @@ import { HashTable } from '../models/hashTable.model';
 import * as _ from "lodash";
 import { SynonymService } from './interfaces/SynonymService';
 
-export class synonymsFunService implements SynonymService {
-    private allsynonyms: HashTable<string>;
+export class SynonymsFunService implements SynonymService {
+    private allSynonyms: HashTable<string>;
 
     constructor() {
-        this.allsynonyms = new HashTable<string>();
+        this.allSynonyms = new HashTable<string>();
     }
 
-    deletesynonym(word: string): string[] | undefined {
+    deleteSynonym(word: string): string[] | undefined {
         throw new Error('Method not implemented.');
     }
-    public getsynonym(word: any): string[] | undefined {
+    public getSynonym(word: any): string[] | undefined {
         const synonyms = _.keys(this.extractChain(word)) 
         return synonyms.length !== 0 ? synonyms : undefined;
     }
@@ -21,17 +21,17 @@ export class synonymsFunService implements SynonymService {
     // memory complexity O(2*m) ~ O(m)
     // time complexity O(m)
     public extractChain(word: any): any {
-        let pointer = this.allsynonyms.get(word);
+        let pointer = this.allSynonyms.get(word);
         if (!pointer) { return null };
-        const wantedsynonyms: any = {};
+        const wantedSynonyms: any = {};
         let value = word;
         while (pointer !== word) {
-            _.set(wantedsynonyms, value, pointer);
+            _.set(wantedSynonyms, value, pointer);
             value = pointer;
-            pointer = this.allsynonyms.get(pointer as string)
+            pointer = this.allSynonyms.get(pointer as string)
         }
-        _.set(wantedsynonyms, value, pointer);
-        return  wantedsynonyms;
+        _.set(wantedSynonyms, value, pointer);
+        return  wantedSynonyms;
     }
 
     public isInActiveChain(word: string, activeChains: any[]): boolean {
@@ -41,12 +41,12 @@ export class synonymsFunService implements SynonymService {
     // 1 - in same chain
     // 2 - two different chains
     // 3 - new synonym
-    public addNewWords(newsynonyms: any[]) {
+    public addNewWords(newSynonyms: any[]) {
         const activeChains: any[] = [];
-        _.forEach(newsynonyms, (syn: any) => {
-            const chainStart: string = this.allsynonyms.get(syn) as string;
+        _.forEach(newSynonyms, (syn: any) => {
+            const chainStart: string = this.allSynonyms.get(syn) as string;
             if (!chainStart) {
-                this.allsynonyms.set(syn, syn);
+                this.allSynonyms.set(syn, syn);
                 activeChains.push({ [syn]: syn });
                 return;
             }
@@ -56,13 +56,13 @@ export class synonymsFunService implements SynonymService {
         });
         const firstKey = _.sample(_.head(activeChains));
         _.forEach(_.tail(activeChains), (chain: any) => {
-            const firstPointer = this.allsynonyms.get(firstKey)
+            const firstPointer = this.allSynonyms.get(firstKey)
             const secondKey = _.sample(chain);
-            const secondPointer = this.allsynonyms.get(secondKey);
-            this.allsynonyms.set(firstKey, secondPointer as string);
-            this.allsynonyms.set(secondKey, firstPointer as string);
+            const secondPointer = this.allSynonyms.get(secondKey);
+            this.allSynonyms.set(firstKey, secondPointer as string);
+            this.allSynonyms.set(secondKey, firstPointer as string);
         });
-        return this.getsynonym(firstKey);
+        return this.getSynonym(firstKey);
     }
 }
 

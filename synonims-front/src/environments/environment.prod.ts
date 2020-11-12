@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: "https://synonyms-reeinvent.herokuapp.com/api/synonyms"
 };

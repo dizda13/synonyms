@@ -1,15 +1,15 @@
 import { NextFunction, Request, Response } from 'express';
 import httpStatus from "http-status";
-import { synonymsStandardService } from './synonyms-standard.service';
+import { SynonymsStandardService } from './synonyms-standard.service';
 import { InternalServerError } from '../midlewares/errors/internal.error';
-import { synonymNotFound } from './errors/synonym.notfound.error';
+import { SynonymNotFound } from './errors/synonym.notfound.error';
 import { TryCatch } from '../common/try-catch-decorator';
 import { logger } from 'src/common/Logger';
 
 export class synonymsController {
-    private synonymsService: synonymsStandardService;
+    private synonymsService: SynonymsStandardService;
     constructor() {
-        this.synonymsService = new synonymsStandardService();
+        this.synonymsService = new SynonymsStandardService();
         this.get = this.get.bind(this);
         this.delete = this.delete.bind(this);
         this.post = this.post.bind(this);
@@ -21,7 +21,7 @@ export class synonymsController {
         const { word } = req.params;
         logger.info("get: fetch synonyms started", { word });
 
-        const synonyms: string[] | undefined = this.synonymsService.getsynonym(word);
+        const synonyms: string[] | undefined = this.synonymsService.getSynonym(word);
 
         if (synonyms !== undefined) {
             logger.info("get: fetch synonyms sucess", { word });
@@ -31,7 +31,7 @@ export class synonymsController {
                 .json({ word, synonyms });
         }
 
-        return next(new synonymNotFound(word));
+        return next(new SynonymNotFound(word));
     }
 
     @TryCatch()
@@ -39,7 +39,7 @@ export class synonymsController {
         const { word } = req.params;
         logger.info("delete: delete synonym started", { word });
 
-        const synonyms: string[] | undefined = this.synonymsService.deletesynonym(word);
+        const synonyms: string[] | undefined = this.synonymsService.deleteSynonym(word);
 
         if (synonyms !== undefined) {
             logger.info("delete: synonym deleted", { word, synonyms });
@@ -49,7 +49,7 @@ export class synonymsController {
                 .json({ word, synonyms });
         }
 
-        return next(new synonymNotFound(word));
+        return next(new SynonymNotFound(word));
     }
 
     @TryCatch()
@@ -58,13 +58,13 @@ export class synonymsController {
         logger.info("post: create synonym started", { word, synonyms });
 
         synonyms.push(word);
-        const allsynonyms: string[] | undefined = this.synonymsService.addNewWords(synonyms);
+        const allSynonyms: string[] | undefined = this.synonymsService.addNewWords(synonyms);
 
-        if (allsynonyms !== undefined) {
-            logger.info("post: create synonym success", { word, allsynonyms });
+        if (allSynonyms !== undefined) {
+            logger.info("post: create synonym success", { word, allsynonyms: allSynonyms });
             return res
                 .status(httpStatus.CREATED)
-                .json({ word, synonyms: allsynonyms });
+                .json({ word, synonyms: allSynonyms });
         }
 
         return next(new InternalServerError());
@@ -78,13 +78,13 @@ export class synonymsController {
     
         synonyms.push(word);
 
-        const allsynonyms: string[] | undefined = this.synonymsService.addNewWords(synonyms);
+        const allSynonyms: string[] | undefined = this.synonymsService.addNewWords(synonyms);
 
-        if (allsynonyms !== undefined) {
-            logger.info("patch: update synonym success", { word, allsynonyms });
+        if (allSynonyms !== undefined) {
+            logger.info("patch: update synonym success", { word, allsynonyms: allSynonyms });
             return res
                 .status(httpStatus.OK)
-                .json({ word, synonyms: allsynonyms });
+                .json({ word, synonyms: allSynonyms });
         }
 
         return next(new InternalServerError());

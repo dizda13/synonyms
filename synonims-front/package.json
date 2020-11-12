@@ -1,6 +1,10 @@
 {
   "name": "synonyms-front",
   "version": "0.0.0",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.13.7"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,12 +26,15 @@
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
+    "@angular/cli": "~7.1.3",
+    "@angular/compiler-cli": "~7.1.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "material-design-icons": "^3.0.1",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~3.1.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
@@ -48,6 +55,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "winston": "^3.3.3",
+    "tslib": "^2.0.1"
   }
 }

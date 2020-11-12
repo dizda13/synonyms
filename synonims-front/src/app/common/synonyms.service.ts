@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 export type SynonymsResponse = {
@@ -12,7 +13,8 @@ export type SynonymsResponse = {
     providedIn: 'root',
 })
 export class SynonymsService {
-    private static readonly URL = "http://localhost:3030/api/synonyms";
+
+    private static readonly URL = environment.baseUrl;
 
     constructor(private httpClient: HttpClient) { }
 

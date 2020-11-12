@@ -1,28 +1,10 @@
 version: '3.7'
 
 services:
-  angular-frontend:
+  synonyms-reeinvent:
     container_name: anuglar-frontend
     build:
-      context: ./synonims-front
+      context: .
       dockerfile: Dockerfile
-    # volumes:
-      # - '.:/app'
-      # - '/app/node_modules'
     ports:
-      - '80:80'
-    # environment:
-      # - NODE_ENV=development
-
-  node-backend:
-    container_name: node-backend
-    build:
-      context: ./synonims-back
-      dockerfile: Dockerfile
-    # volumes:
-      # - '.:/app'
-      # - '/app/node_modules'
-    ports:
-      - '3030:3030'
-    # environment:
-    # - NODE_ENV=development
+     - '3030:3030'

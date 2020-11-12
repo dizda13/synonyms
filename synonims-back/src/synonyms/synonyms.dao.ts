@@ -1,6 +1,6 @@
 import { HashTable } from '../models/hashTable.model';
 
-class synonymsDao {
+class SynonymsDao {
     private wordTable: HashTable<string>;
     private synonymsTable: HashTable<string[]>;
     public counterId = 0;
@@ -23,4 +23,4 @@ class synonymsDao {
     }
 }
 
-export default new synonymsDao() as synonymsDao;
+export default new SynonymsDao() as SynonymsDao;

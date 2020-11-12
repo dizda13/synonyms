@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'synonyms-front';
 
   openGithub() {
-    window.open("https://github.com/dizda13");
+    window.open("https://github.com/dizda13/synonyms");
   }
 }
