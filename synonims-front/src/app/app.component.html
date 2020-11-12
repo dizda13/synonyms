@@ -1,0 +1,22 @@
+<mat-toolbar class="toolbar">
+  <h1 style='font-family: "Courier New", Courier, monospace;'>synonym finder</h1>
+  <span class="example-spacer"></span>
+
+  <button routerLink="/word" style="display: inline-block;" type="button" mat-button mat-icon-button aria-label="Clear">
+    <mat-icon>search</mat-icon>
+  </button>
+
+  <button routerLink="/add" style="display: inline-block;" type="button" mat-button mat-icon-button aria-label="Clear">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <button style="display: inline-block;" type="button" (click)="openGithub()" mat-button mat-icon-button
+    aria-label="Clear">
+    <img class="github-mark-picture" src="assets/images/GitHub-Mark-Light-64px.png" alt="Bookmark">
+  </button>
+
+</mat-toolbar>
+
+<div class="main-page">
+  <router-outlet></router-outlet>
+</div>

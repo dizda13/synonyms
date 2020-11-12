@@ -1,0 +1,45 @@
+<form class="example-form" [@openClose]="lastSearch !==undefined ? 'open' : 'closed'">
+    <mat-form-field appearance="fill" class="search">
+        <mat-label>
+            <mat-icon aria-hidden="false">search</mat-icon>
+            Search
+        </mat-label>
+
+        <input tabindex="1" matInput fillColor="primary" type="search" name="search" [(ngModel)]="searchParam">
+
+        <mat-hint>Search for synonym</mat-hint>
+
+        <button tabindex="-1" *ngIf="searchParam" type="button" (click)="clearSearchParam()" mat-button matSuffix
+            mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+        </button>
+
+    </mat-form-field>
+
+    <div class="action-buttons">
+        <button tabindex="1" mat-raised-button class="my-buttons" color="primary" (click)="findWord()">
+            Find
+        </button>
+        <button mat-raised-button class="my-buttons" color="primary" (click)="navigateToNewWord()">
+            Add new word
+        </button>
+    </div>
+</form>
+
+<div *ngIf="lastSearch!==undefined">
+    <div *ngIf="synonyms.length; else elseBlock">
+
+        <synonyms-list [list]="synonyms" (newSynonymEmitter)="newSynonymAdded($event)"
+            (removeSynonymEmitter)="synonymDeleted($event)"></synonyms-list>
+
+        <mat-paginator class="list-paginator" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+    </div>
+
+    <ng-template #elseBlock>
+        <div class="not-found-container">
+            <h1 class="not-found-text">Synonyms for word "{{ lastSearch }}" not found</h1>
+        </div>
+    </ng-template>
+
+</div>

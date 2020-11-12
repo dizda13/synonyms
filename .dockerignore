@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+
+.git
+.firebase
+.editorconfig
+/e2e
+/docs
+.gitignore
+*.zip
+*.md
+.vscode

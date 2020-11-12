@@ -1,0 +1,24 @@
+<form class="example-form">
+    <mat-form-field appearance="fill" class="new-word">
+        <mat-label> New word</mat-label>
+        <input #newWordInput [formControl]="wordFormControl" [errorStateMatcher]="matcher" matInput>
+        <mat-hint>Add new word</mat-hint>
+
+        <mat-error *ngIf="wordFormControl.hasError('required')">
+            Input word
+        </mat-error>
+
+        <button *ngIf="wordFormControl.value" (click)="clearSearchParam()" mat-button matSuffix mat-icon-button
+            aria-label="Clear">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</form>
+
+<synonyms-list [list]="synonyms" (newSynonymEmitter)="addSynonym($event)"
+    (removeSynonymEmitter)="removeSynonym($event)">
+</synonyms-list>
+
+<button *ngIf="synonyms.length" class="add-button" color="primary" (click)="addNewWord()" mat-raised-button>
+    Add word & synonyms
+</button>

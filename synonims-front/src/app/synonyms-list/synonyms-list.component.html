@@ -1,0 +1,54 @@
+<mat-divider style="margin: 3% 0%;"></mat-divider>
+<div class="synonyms-list-h-div">
+    <h2 class="synonyms-list-header">
+        synonyms list
+    </h2>
+
+    <span class="example-spacer"></span>
+
+    <div class="add-synonyms">
+        <button mat-raised-button color="primary" aria-label="Add new input" (click)="showNewInput()">
+            Add new synonym
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>
+
+<mat-list *ngIf="synonyms.length || inputVisibility" class="words-list">
+
+    <div *ngFor="let synonym of synonyms; let index=index">
+        <mat-list-item style="display: inline-block;">
+            <p>{{index+1}}. {{synonym}}</p>
+            <span class="example-spacer"></span>
+            <button type="button" mat-button mat-icon-button aria-label="Clear" (click)="removeSynonym(index)">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </div>
+
+    <form (keyUp.enter)="addNewSynonyms()">
+        <mat-form-field *ngIf="inputVisibility" appearance="fill" class="add-new-form" style="width: 100%;">
+            <mat-label>
+                <mat-icon aria-hidden="false">add</mat-icon> synonym ...
+            </mat-label>
+            <input #input matInput type="search" name="search" [(ngModel)]="newSynonym">
+
+            <div class="input-button" matSuffix>
+                <button style="display: inline-block" type="button" (click)="removeInput()" mat-button mat-icon-button
+                    aria-label="Clear">
+                    <mat-icon>close</mat-icon>
+                </button>
+
+                <mat-divider style="display: inline-block" class="vertical-input-divider" vertical></mat-divider>
+
+                <button style="display: inline-block" type="button" (click)="addNewSynonyms()" mat-button
+                    mat-icon-button aria-label="Clear">
+                    <mat-icon>add</mat-icon>
+                </button>
+
+            </div>
+        </mat-form-field>
+    </form>
+
+</mat-list>
