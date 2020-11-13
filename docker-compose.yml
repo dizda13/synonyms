@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   synonyms-reeinvent:
-    container_name: anuglar-frontend
+    container_name: local
     build:
       context: .
       dockerfile: Dockerfile
