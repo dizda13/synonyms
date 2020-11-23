@@ -18,7 +18,7 @@ router.route("/synonyms/:word")
 
 router.route("/synonyms")
     .post([
-        bodyNewWordValidator,
+        // bodyNewWordValidator,
         bodySynonymsValidator,
         validator,
     ], synonymsController.post);

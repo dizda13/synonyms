@@ -8,8 +8,6 @@ import { router } from "./routes";
 import { errorConverter } from '../midlewares/error.converter';
 import timeout = require("connect-timeout")
 import { logs } from './vars';
-import { logger } from 'src/common/Logger';
-
 export const app = express();
 
 app.use(timeout("30s"))

@@ -7,10 +7,11 @@ import { SynonymsFindComponent } from './synonyms-find/synonyms-find.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule, } from "@angular/material/form-field"
 import { MatButtonModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatPaginatorModule, MatSnackBarModule, MatToolbarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
-import { AddWordComponent } from './add-word.component.ts/add-word.component';
+import { AddWordComponent } from './add-word/add-word.component';
 import { SynonymsListComponent } from './synonyms-list/synonyms-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddSynonimsComponent } from './add-synonims/add-synonims.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     SynonymsFindComponent,
     AddWordComponent,
     SynonymsListComponent,
+    AddSynonimsComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,36 @@
+<form class="example-form">
+
+    <mat-form-field appearance="fill" class="custom-input">
+        <mat-label> Word</mat-label>
+        <input [formControl]="wordFormControl" [errorStateMatcher]="matcher" matInput>
+        <mat-hint>Add new word</mat-hint>
+
+        <mat-error *ngIf="wordFormControl.hasError('required')">
+            Input word
+        </mat-error>
+
+        <button *ngIf="wordFormControl.value" (click)="clearWord()" mat-button matSuffix mat-icon-button
+            aria-label="Clear">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="custom-input">
+        <mat-label>Synonim</mat-label>
+        <input #newWordInput [formControl]="synonimFormControl" [errorStateMatcher]="matcher" matInput>
+        <mat-hint>Add synonim</mat-hint>
+
+        <mat-error *ngIf="synonimFormControl.hasError('required')">
+            Input synonim
+        </mat-error>
+
+        <button *ngIf="synonimFormControl.value" (click)="clearSynonym()" mat-button matSuffix mat-icon-button
+            aria-label="Clear">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <button [disabled]="synonimFormControl.errors || wordFormControl.errors" class="add-button" color="primary" (click)="addSynonym()" mat-raised-button>
+        Submit
+    </button>
+</form>

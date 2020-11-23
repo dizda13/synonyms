@@ -44,3 +44,6 @@ logs
 # System Files
 .DS_Store
 Thumbs.db
+
+*/coverage
+*/logs

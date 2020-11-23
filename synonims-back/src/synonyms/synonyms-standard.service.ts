@@ -1,4 +1,4 @@
-import { forEach, uniq, without } from "lodash"
+import { forEach, uniq, without, first } from "lodash"
 import { HashTable } from "../models/hashTable.model";
 import { SynonymService } from './interfaces/SynonymService';
 import synonymsDao from './synonyms.dao';
@@ -36,7 +36,7 @@ export class SynonymsStandardService implements SynonymService {
             }
             this.wordTable.delete(word);
 
-            return this.synonymsTable.get(synonymsId)
+            return this.synonymsTable.get(synonymsId) || []
         }
         return undefined;
     }
@@ -50,8 +50,10 @@ export class SynonymsStandardService implements SynonymService {
 
         // memory - O(n)
         const synonymsTableIds: string[] = [];
+        let mainId: string | undefined = this.wordTable.get(first(words) as string);
         const newId: string = synonymsDao.getNextId();
         const newWords: string[] = [];
+
         // time - O(m)
         forEach(words, (word: string) => {
             const synonymsTableId: string | undefined = this.wordTable.get(word);
@@ -65,12 +67,14 @@ export class SynonymsStandardService implements SynonymService {
 
         if (newWords.length > 0 || synonymsTableIds.length > 1) {
             this.synonymsTable.set(newId, newWords);
+            mainId = newId;
         }
         if ((newWords.length ? 1 : 0) + synonymsTableIds.length > 1) {
             this.mergeTables(newId, ...uniq(synonymsTableIds));
+            mainId = newId;
         }
 
-        return this.synonymsTable.get(newId);
+        return mainId ? this.synonymsTable.get(mainId) : undefined
     }
 
     private mergeTables(mainTableKey: string, ...otherTableKeys: string[]) {
